@@ -60,7 +60,7 @@ img {
     margin-right: auto;
 }
 
-/* MOBILE HEADER STYLE*/
+/*** MOBILE HEADER STYLE ***/
 
 .page-header {
     padding-top: 16px;
@@ -109,7 +109,7 @@ img {
             margin-left: auto;
         }
     
-        /*MOBILE MENU WINDOW*/
+/*** MOBILE MENU WINDOW ***/
     
         .mobile-menu-wrapper {
             position: fixed;
@@ -219,14 +219,65 @@ img {
         }
 }
 
-/*TABLET*/
+/*** MOBILE MAIN TITLE STYLE ***/
+
+.page-main-title {
+    background-color: rgba(46, 47, 66, 0.70);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)),
+    url(../images/mobile-images/office-people-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 72px 0;
+}
+
+@media screen and (min-resolution:192dpi) {
+    .page-main-title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), 
+        url(../images/mobile-images/office-people-mobile@2x.jpg);
+    }
+}
+
+.main-title {
+    text-align: center;       
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFF;
+    padding: 0px 40px;
+}
+
+.button-main-title {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 72px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFF;
+    background-color: #4D5AE5;
+}
+
+/********** TABLET **********/
 
 @media screen and (min-width: 768px) {
     .container {
         max-width:768px;
     }
 
-        /* TABLET HEADER STYLE*/
+/*** TABLET HEADER STYLE ***/
     
         .mobile-menu-open-btn {
             display: none;
@@ -294,17 +345,47 @@ img {
             letter-spacing: 0.04em;
             color: #434455;
         }
+
+        /*** TABLET MAIN TITLE STYLE ***/
+
+        .page-main-title {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/tablet-images/office-people-tablet.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            max-width: 768px;
+            padding: 112px 0px;
+        }
+
+        @media screen and (min-resolution:192dpi) {
+            .page-main-title {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+                url(../images/tablet-images/office-people-tablet@2x.jpg);
+            }
+        }
+
+        .main-title {
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.07;
+            letter-spacing: 0.02em;
+            padding: 0px 80px;
+        }
 }
 
 
-/*DESKTOP*/
+/********** DESKTOP **********/
 
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
     }
 
-        /* DESKTOP HEADER STYLE*/
+        /*** DESKTOP HEADER STYLE ***/
 
     .logo {
         margin-right: 76px;
@@ -330,6 +411,36 @@ img {
     .contacts-list-link:hover,
     .contacts-list-link:focus {
         color: #404BBF;
+    }
+
+        /*** DESKTOP MAIN TITLE STYLE ***/
+
+    .page-main-title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/desktop-images/office-people-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        max-width: 1440px;
+        padding: 188px 0px;
+    }
+
+    @media screen and (min-resolution:192dpi) {
+        .page-main-title {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+                url(../images/desktop-images/office-people-desktop@2x.jpg);
+        }
+    }
+
+    .button-main-title {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .button-main-title:hover,
+    .button-main-title:focus {
+        background-color: #404BBF;
     }
 
 }
