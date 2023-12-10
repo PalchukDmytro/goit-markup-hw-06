@@ -249,6 +249,8 @@ img {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-right: auto;
+    margin-left: auto;
     color: #FFF;
     padding: 0px 40px;
 }
@@ -268,6 +270,42 @@ img {
     letter-spacing: 0.04em;
     color: #FFF;
     background-color: #4D5AE5;
+}
+
+/*** MOBILE VALUES STYLE ***/
+
+.container-list-values-icon {
+    display: none;
+}
+
+.values {
+    padding: 96px 0px;
+}
+
+.title-values-item {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: #2E2F42;
+}
+
+.about-values-item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    /*margin-bottom: 72px;*/
+    color: #434455;
+}
+
+.list-values {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
 }
 
 /********** TABLET **********/
@@ -373,8 +411,19 @@ img {
             font-weight: 700;
             line-height: 1.07;
             letter-spacing: 0.02em;
-            padding: 0px 80px;
+            max-width: 496px;
+            padding: 0px;
+            text-transform: none;
         }
+
+        .button-main-title {
+            margin-top:36px;
+        }
+
+ /*** TABLET VALUES STYLE ***/
+
+ 
+
 }
 
 
@@ -432,6 +481,10 @@ img {
                 rgba(46, 47, 66, 0.7)),
                 url(../images/desktop-images/office-people-desktop@2x.jpg);
         }
+    }
+
+    .button-main-title {
+        margin-top: 48px;
     }
 
     .button-main-title {
