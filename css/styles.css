@@ -234,7 +234,9 @@ img {
     padding: 72px 0;
 }
 
-@media screen and (min-resolution:192dpi) {
+@media screen and (min-resolution:192dpi) and (max-width:767px),
+       screen and (min-resolution:2dppx) and (max-width:767px),
+       screen and (min-device-pixel-ratio:2) and (max-width:767px) {
     .page-main-title {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), 
@@ -392,6 +394,61 @@ img {
     fill: #F4F4FD;
 }
 
+/*** MOBILE PORTFOLIO STYLE ***/
+
+.overlay {
+    display: none;
+}
+
+.portfolio {
+    padding: 16px 0 96px;
+}
+
+.title-portfolio {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+    color: #2E2F42;
+}
+
+.list-portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.list-portfolio-item {
+    border: 1px solid #F4F4FD;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.title-about {
+    padding: 32px 16px;
+}
+
+.title-portfolio-item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    color: #2E2F42;
+}
+
+.about-portfolio-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
 /********** TABLET **********/
 
 @media screen and (min-width: 768px) {
@@ -481,7 +538,9 @@ img {
         padding: 112px 0px;
     }
 
-    @media screen and (min-resolution:192dpi) {
+    @media screen and (min-resolution:192dpi) and (min-width:768px),
+           screen and (min-resolution:2dppx) and (min-width:768px),
+           screen and (min-device-pixel-ratio:2) and (min-width:768px) {
         .page-main-title {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -583,7 +642,9 @@ img {
         padding: 188px 0px;
     }
 
-    @media screen and (min-resolution:192dpi) {
+    @media  screen and (min-resolution:192dpi) and (min-width:1158px),
+            screen and (min-resolution:2dppx) and (min-width:1158px),
+            screen and (min-device-pixel-ratio:2) and (min-width:1158px) {
         .page-main-title {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -648,6 +709,10 @@ img {
     }
 
 /*** DESKTOP TEAM STYLE ***/
+
+    .team-foto {
+        padding: 120px 0px;
+    }
 
     .list-team {
         margin: 0px;
