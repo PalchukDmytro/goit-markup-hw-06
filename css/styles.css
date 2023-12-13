@@ -421,8 +421,7 @@ img {
     gap: 48px;
 }
 
-.list-portfolio-item {
-    border: 1px solid #F4F4FD;
+.shadow-portfolio {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
         0px 1px 1px 0px rgba(46, 47, 66, 0.16),
         0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -430,6 +429,8 @@ img {
 
 .title-about {
     padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
 }
 
 .title-portfolio-item {
@@ -447,6 +448,141 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+/*** MOBILE FOOTER STYLE ***/
+
+.page-footer {
+    background-color: #2E2F42;
+    padding: 96px 0px;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #4d5ae5;
+}
+
+.white-logo {
+    color: #F4F4FD;
+}
+
+.about-footer {
+    max-width: 288px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    margin-bottom: 72px;
+}
+
+.social-media-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    color: #FFF;
+}
+
+.social-list-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 72px;
+}
+
+.social-item-footer {
+    width: 40px;
+    height: 40px;
+}
+
+.social-link-footer {
+    display: flex;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon-footer {
+    fill: #F4F4FD
+}
+
+.form-footer-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFF;
+    margin-bottom: 16px;
+}
+
+.label-email-footer {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFF;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.input-email-footer {
+    width: 288px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+}
+
+.input-email-footer::placeholder {
+    color: #FFF;
+}
+
+.form-footer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4D5AE5;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-footer-button-icon {
+    margin-left: 16px;
+    fill: #ffffff;
 }
 
 /********** TABLET **********/
@@ -595,7 +731,7 @@ img {
 
     .list-portfolio {
         display: flex;
-        gap: 72px 22px;
+        gap: 72px 24px;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -759,10 +895,11 @@ img {
         .list-porfolio-item {
             border: none;
             box-shadow: none;
-            width: calc((100%-100)/6);
+            width: calc((100%-112)/6);
         }
     
-        /*.shadow-portfolio {
+        .shadow-portfolio {
+            box-shadow: none;
             transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     
@@ -771,11 +908,33 @@ img {
                 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
                 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
         }
-    
-        .title-about {
-            padding: 32px 16px;
-            border: 1px solid #E7E9FC;
-            border-top: none;
-        }*/
+
+        .container-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .overlay {
+            display: block;
+            position: absolute;
+            background-color: #4D5AE5;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            overflow: auto;
+            transform: translateY(100%);
+            color: #F4F4FD;
+            padding: 40px 32px;
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .list-portfolio-item:hover .overlay {
+            transform: translateY(0);
+        }
 
 }
