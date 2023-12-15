@@ -167,11 +167,15 @@ img {
         }
     
         .mobile-contacts {
+            /*display: flex;
+            margin-top: auto;*/
             font-style: normal;
         }
     
         .mobile-contacts-list {
-            padding-top: 128px;
+            
+            margin-top: 128px;
+            
         }
     
         .mobile-contacts-list-item {
@@ -949,6 +953,10 @@ img {
 
 /*** TABLET FOOTER STYLE ***/
 
+    .container-footer{
+        max-width: 584px;
+    }
+
     .footer-link {
         justify-content: flex-start;
     }
@@ -968,14 +976,6 @@ img {
     .footer-logo-media {
         display: flex;
         gap:24px;
-    }
-
-    .footer-logo {
-        margin-left: 108px;
-    }
-
-    .container-form-footer {
-        margin-left: 108px;
     }
 
     .form-footer-title {
