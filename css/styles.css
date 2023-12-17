@@ -112,6 +112,7 @@ img {
 /*** MOBILE MENU WINDOW ***/
     
         .mobile-menu-wrapper {
+            display: flex;
             position: fixed;
             top: 0;
             left: 0;
@@ -130,6 +131,8 @@ img {
     
         .mobile-menu-container {
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
     
         .mobile-menu-close-btn {
@@ -165,17 +168,13 @@ img {
         .mobile-menu-link-studio {
             color: #404BBF;
         }
-    
-        .mobile-contacts {
-            /*display: flex;
-            margin-top: auto;*/
-            font-style: normal;
+
+        .container-mobile-contacts-social {
+            margin-top: auto;
         }
     
-        .mobile-contacts-list {
-            
-            margin-top: 128px;
-            
+        .mobile-contacts {
+            font-style: normal;
         }
     
         .mobile-contacts-list-item {
